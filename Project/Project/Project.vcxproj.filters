@@ -18,7 +18,11 @@
     <ClCompile Include="Project.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="questions.cpp">
+=======
+    <ClCompile Include="Test_Your_Knowledge.cpp">
+>>>>>>> 0dc1b824e2a05fbd5eb206be0e1ea08f8c7ee609
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +30,11 @@
     <ClInclude Include="Header.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="questions.h">
+=======
+    <ClInclude Include="TestYourKnowledge.h">
+>>>>>>> 0dc1b824e2a05fbd5eb206be0e1ea08f8c7ee609
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

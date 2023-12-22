@@ -128,11 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Project.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="questions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="questions.h" />
+=======
+    <ClCompile Include="Test_Your_Knowledge.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="TestYourKnowledge.h" />
+>>>>>>> 0dc1b824e2a05fbd5eb206be0e1ea08f8c7ee609
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
