@@ -1,3 +1,4 @@
 #ignore all .log and .tlog files
 *.log
 *.tlog
+*.vsidx
