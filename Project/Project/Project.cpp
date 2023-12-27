@@ -3,6 +3,5 @@
 
 void main()
 {
-	setlocale(LC_ALL, "Russian");
-	
+	setlocale(LC_ALL, "Russian");	
 }
