@@ -1,6 +1,6 @@
 #include "Header.h"
 
-// Структура для вопроса
+/*/ Структура для вопроса
 struct Question {
     string questionText;
     vector<string> options;
@@ -10,7 +10,7 @@ struct Question {
 // Структура для билета
 struct Ticket {
     vector<Question> questions;
-};
+};*/
 
 void PrintHelloScreen() {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
@@ -32,39 +32,47 @@ void PrintHelloScreen() {
 }
 
 // Функция для проведения теста
-void conductTest(const vector<Ticket>& tickets) {
+void conductTest(/*const vector<Ticket>& tickets*/) {
+    char maxTicketIndex = 3;
+    char maxQuestionIndex = 4;
     int correctAnswers = 0;
     int totalQuestions = 0;
 
     for (int i = 0; i < 5; ++i) {
         // Выбор случайного билета и вопроса
-        int ticketIndex = rand() % tickets.size();
-        int questionIndex = rand() % tickets[ticketIndex].questions.size();
-        const Question& question = tickets[ticketIndex].questions[questionIndex];
+        char ticketIndex = (rand() % maxTicketIndex)+1;
+        char questionIndex = (rand() % maxQuestionIndex)+1;
+     
+        //const Question& question = tickets[ticketIndex].questions[questionIndex];
 
-        cout << "Вопрос " << i + 1 << ": " << question.questionText << endl;
+        cout << "Вопрос " << i + 1 << ": Билет " << char(ticketIndex + 48) << " Вопрос " << char(questionIndex + 48) << endl;
+
+        char correctOptionIndex = GetQuestion(ticketIndex, questionIndex);
+        char maxOptions = GetSizeQuestion(ticketIndex, questionIndex);
 
         // Вывод вариантов ответов
-        for (int j = 0; j < question.options.size(); ++j) {
+       /* for (int j = 0; j < question.options.size(); ++j) {
             cout << j + 1 << ". " << question.options[j] << endl;
-        }
+        }*/
 
         // Ответ от пользователя
-        int userAnswer;
+        char userAnswer;
         cout << "Ваш ответ: ";
-        while (!(cin >> userAnswer) || userAnswer < 1 || userAnswer > question.options.size()) {
+        while (!(cin >> userAnswer) || ((userAnswer < '1' || userAnswer >  maxOptions + 48) && (userAnswer < 'A' || userAnswer > maxOptions + 64) && (userAnswer < 'a' || userAnswer > maxOptions + 96))) {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Пожалуйста, введите число от 1 до " << question.options.size() << ": ";
+            cout << "Пожалуйста, введите число от A до " << char(maxOptions + 64) << ": ";
         }
 
         // Проверка правильности ответа
-        if (userAnswer == question.correctOptionIndex + 1) {
+        if (userAnswer == correctOptionIndex + 64 || userAnswer == correctOptionIndex + 48 || userAnswer == correctOptionIndex + 96) {
+            Beep(1000, 500);
             cout << "\033[42mПравильно!\033[0m" << endl;
             correctAnswers++;
         }
         else {
-            cout << "\033[41mНеправильно.\033[0m\nПравильный ответ: " << question.options[question.correctOptionIndex] << endl;
+            cout << "\033[41mНеправильно.\033[0m\nПравильный ответ: " << char(correctOptionIndex + 64) << endl;
+            Beep(200, 500);
         }
 
         totalQuestions++;
@@ -83,7 +91,7 @@ void conductTest(const vector<Ticket>& tickets) {
 
 
 void TestYourKnowledge() {
-    setlocale(LC_ALL, "Russian");
+    //setlocale(LC_ALL, "Russian");
     srand(time(NULL));
     
     system("cls");
@@ -92,7 +100,7 @@ void TestYourKnowledge() {
 int ch=_getch();
 if (ch != 27) {
     system("cls");
-    vector<Ticket> tickets{
+   /* vector<Ticket> tickets{
         {
             {{"Вопрос 1 (Билет 1)", {"Ответ 1", "Ответ 2", "Ответ 3"}, 0},
              {"Вопрос 2 (Билет 1)", {"Ответ 1", "Ответ 2", "Ответ 3"}, 1},
@@ -108,11 +116,11 @@ if (ch != 27) {
              {"Вопрос 2 (Билет 3)", {"Ответ 1", "Ответ 2", "Ответ 3"}, 1},
              {"Вопрос 3 (Билет 3)", {"Ответ 1", "Ответ 2", "Ответ 3"}, 2}}
         }
-    };
+    };*/
 
     char choice;
     do {
-        conductTest(tickets);
+        conductTest();
 
         cout << "Желаете пройти тест еще раз? (y/n): ";
         while (!(cin >> choice) || (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N')) {
@@ -123,6 +131,6 @@ if (ch != 27) {
         system("cls");
     } while (choice == 'y' || choice == 'Y');
 }
-system("cls");
-    cout << "До свидания!" << endl;
+
+    system("cls");
 }

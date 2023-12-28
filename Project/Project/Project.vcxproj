@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Prepare.cpp" />
     <ClCompile Include="Project.cpp" />
     <ClCompile Include="Test_Your_Knowledge.cpp" />
     <ClCompile Include="Tickets_and_Answers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
+    <ClInclude Include="Prepare.h" />
     <ClInclude Include="TestYourKnowledge.h" />
     <ClInclude Include="Tickets_and_Answers.h" />
   </ItemGroup>
