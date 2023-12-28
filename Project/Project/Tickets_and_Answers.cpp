@@ -1,7 +1,6 @@
 #include "Tickets_and_Answers.h"
 
-
-char GetQuestion(char idTicket, char idQuestion) {
+; char GetQuestion(char idTicket, char idQuestion) {
 	idTicket--;
 	char id = (idTicket * 4) + idQuestion;
 	string bufQ, bufA, bufB, bufC, bufD; char returnchar ;
@@ -27,3 +26,30 @@ char GetQuestion(char idTicket, char idQuestion) {
 		<< '\t' << bufC << endl << '\t' << bufD << endl;
 	return returnchar - 64;
 }
+
+char GetSizeQuestion(char idTicket, char idQuestion) {
+	idTicket--;
+	char id = (idTicket * 4) + idQuestion;
+	ifstream answers("noDB\\answers.koi");
+	string buf;
+	if (answers.is_open())
+	{
+		for (char i = 0; i < id; i++) {
+			for (char j = 0; j < 4; j++) {
+				getline(answers, buf);
+			}
+		}
+	}
+	else {
+		cout << "Не удалось получить доступ к данным :(" << endl;
+		return NULL;
+	}
+	answers.close();
+	if (buf == "\n") {
+		return 3;
+	}
+	else {
+		return 4;
+	}
+}
+
