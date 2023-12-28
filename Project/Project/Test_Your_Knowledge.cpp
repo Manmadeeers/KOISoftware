@@ -63,7 +63,8 @@ void conductTest(/*const vector<Ticket>& tickets*/) {
             cin.ignore(32767, '\n');
             cout << "Пожалуйста, введите число от A до " << char(maxOptions + 64) << ": ";
         }
-
+        cin.clear();
+        cin.ignore(32767, '\n');
         // Проверка правильности ответа
         if (userAnswer == correctOptionIndex + 64 || userAnswer == correctOptionIndex + 48 || userAnswer == correctOptionIndex + 96) {
             Beep(1000, 500);
