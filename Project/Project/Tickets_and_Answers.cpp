@@ -42,7 +42,7 @@ char GetSizeQuestion(char idTicket, char idQuestion) {
 		}
 		for (char j = 0; j < 4; j++) {
 			getline(answers, buf);
-			if (buf != "\n") {
+			if (buf != "") {
 				countch++;
 			}
 		}
