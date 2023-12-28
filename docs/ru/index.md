@@ -1,2 +1,2 @@
-[Документация](./getting-started.md)
+[Документация](./Documentation.md)
 
