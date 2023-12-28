@@ -6,7 +6,8 @@
 #include <ctime>
 #include <vector>
 #include <conio.h>
-#include <string.h>
+#include <string>
+#include <fstream>
 
 #include "TestYourKnowledge.h"
 #include "Tickets_and_Answers.h"

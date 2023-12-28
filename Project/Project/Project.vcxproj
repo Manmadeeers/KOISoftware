@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Project.cpp" />
     <ClCompile Include="Test_Your_Knowledge.cpp" />
+    <ClCompile Include="Tickets_and_Answers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
