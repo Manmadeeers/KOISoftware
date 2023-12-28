@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>KOISoftware</title>
+    <title>BSTU Exam Master</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 
@@ -55,7 +55,7 @@
         </div>
 
         <div class="employee-card">
-            <img src="Korobov.jpg" alt="Employee 4">
+            <img src="Korobov.jpg" alt="Employee 4" class="Korobov">
             <h3>Егор Коробов</h3>
             <p>Позиция: Разработчик</p>
             <p>Выполненая работа: Разработка модуля "Тестирование своих знаний"</p>
@@ -73,6 +73,15 @@
     <footer>
         <p>&copy; 2023 KOISoftware. All rights reserved.</p>
     </footer>
+    <script>
+        let egor = document.getElementsByClassName("Korobov")[0];
+        egor.addEventListener("mouseover",function(){
+            egor.src = "Korobov1.jpg";
+        })
+        egor.addEventListener("mouseout",function(){
+            egor.src = "Korobov.jpg";
+        })
+    </script>
 </body>
 
 </html>
