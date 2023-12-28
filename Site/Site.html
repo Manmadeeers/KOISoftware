@@ -1,17 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Style.css" rel="stylesheet">
-    <title>Name</title>
-</head>
-<body >
-    <div id="particles-js"></div>
-    <script src="particles.js"></script>
-    <script src="js/app.js"></script>
+<html>
 
-    
-    
+<head>
+    <title>KOISoftware</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header>
+        <h1>KOI Software</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#employees">Наши разработчики</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about" id="about">
+        <h2>О нас</h2>
+        <div class="goal">
+            <img src="Logo.jpg">
+            <h3>Наша цель</h3>
+            <p>Мы - группа студентов первого курса факультета информационных технологий Белорусского государственного технологического университета.
+                И, будучи озабоченными предстоящей экзаменационной сессией, поставили перед собой цель: разработать приложение , которое бы могло помочь 
+                студентам подготовиться к одному из  экзаменов. Для работы мы выбрали дисциплину "Основы программной инженерии" как одну из самых
+                комплексных и сложных в семестре.
+            </p>
+        </div>
+    </div>
+
+    <main id="employees">
+        <h2>Наши разработчики</h2>
+        <div class="employee-card">
+            <img src="Filipiuk.jpg" alt="Employee 1">
+            <h3>Илья Филипюк</h3>
+            <p>Позиция: Скрам-мастер</p>
+            <p>Выполненая работа:</p>
+        </div>
+
+        <div class="employee-card">
+            <img src="Zhukovskaya.jpg" alt="Employee 2">
+            <h3>Полина Жуковская</h3>
+            <p>Позиция: Тестировщик</p>
+            <p>Выполненая работа: Тестирование промежуточных и итоговой версии программного продукта</p>
+        </div>
+
+        <div class="employee-card">
+            <img src="Kachinskas.jpg" alt="Employee 3">
+            <h3>Вацловас Качинскас</h3>
+            <p>Позиция: Разработчик</p>
+            <p>Выполненая работа:Разработка модулей обработки вопросов и взаимодействия с ними  </p>
+        </div>
+
+        <div class="employee-card">
+            <img src="Korobov.jpg" alt="Employee 4">
+            <h3>Егор Коробов</h3>
+            <p>Позиция: Разработчик</p>
+            <p>Выполненая работа: Разработка модуля "Тестирование своих знаний"</p>
+        </div>
+
+        <div class="employee-card">
+            <img src="Miron.jpg" alt="Employee 5">
+            <h3>Никита Мирон</h3>
+            <p>Позиция: Разработчик</p>
+            <p>Выполненая работа: Разработка модуля "Подготовка к экзамену"</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 KOISoftware. All rights reserved.</p>
+    </footer>
+    <script>
+        let info = document.getElementsByClassName("goal")[0];
+        let blurElement = document.createElement('div');
+        blurElement.classList.add('blur-element');
+        info.addEventListener("mouseover",function(){
+            document.body.appendChild(blurElement);
+        })
+        info.addEventListener("mouseout",function(){
+            document.body.removeChild(blurElement);
+        })
+    </script>
 </body>
+
 </html>
