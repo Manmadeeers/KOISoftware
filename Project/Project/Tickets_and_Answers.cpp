@@ -32,11 +32,18 @@ char GetSizeQuestion(char idTicket, char idQuestion) {
 	char id = (idTicket * 4) + idQuestion;
 	ifstream answers("noDB\\answers.koi");
 	string buf;
+	char countch = 0;
 	if (answers.is_open())
 	{
-		for (char i = 0; i < id; i++) {
+		for (char i = 0; i < id-1; i++) {
 			for (char j = 0; j < 4; j++) {
 				getline(answers, buf);
+			}
+		}
+		for (char j = 0; j < 4; j++) {
+			getline(answers, buf);
+			if (buf != "\n") {
+				countch++;
 			}
 		}
 	}
@@ -45,11 +52,6 @@ char GetSizeQuestion(char idTicket, char idQuestion) {
 		return NULL;
 	}
 	answers.close();
-	if (buf == "\n") {
-		return 3;
-	}
-	else {
-		return 4;
-	}
+	return countch;
 }
 

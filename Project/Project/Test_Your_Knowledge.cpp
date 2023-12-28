@@ -45,7 +45,7 @@ void conductTest(/*const vector<Ticket>& tickets*/) {
      
         //const Question& question = tickets[ticketIndex].questions[questionIndex];
 
-        cout << "Вопрос " << i + 1 << ": " << endl;
+        cout << "Вопрос " << i + 1 << ": Билет " << char(ticketIndex + 48) << " Вопрос " << char(questionIndex + 48) << endl;
 
         char correctOptionIndex = GetQuestion(ticketIndex, questionIndex);
         char maxOptions = GetSizeQuestion(ticketIndex, questionIndex);
@@ -58,14 +58,14 @@ void conductTest(/*const vector<Ticket>& tickets*/) {
         // Ответ от пользователя
         char userAnswer;
         cout << "Ваш ответ: ";
-        while (!(cin >> userAnswer) || ((userAnswer < '1' || userAnswer >  maxOptions + 48) && (userAnswer < 'A' || userAnswer > maxOptions + 64))) {
+        while (!(cin >> userAnswer) || ((userAnswer < '1' || userAnswer >  maxOptions + 48) && (userAnswer < 'A' || userAnswer > maxOptions + 64) && (userAnswer < 'a' || userAnswer > maxOptions + 96))) {
             cin.clear();
             cin.ignore(32767, '\n');
             cout << "Пожалуйста, введите число от A до " << char(maxOptions + 64) << ": ";
         }
 
         // Проверка правильности ответа
-        if (userAnswer == correctOptionIndex + 64 || userAnswer == correctOptionIndex + 48) {
+        if (userAnswer == correctOptionIndex + 64 || userAnswer == correctOptionIndex + 48 || userAnswer == correctOptionIndex + 96) {
             cout << "\033[42mПравильно!\033[0m" << endl;
             correctAnswers++;
         }

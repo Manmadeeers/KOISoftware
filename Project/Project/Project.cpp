@@ -11,20 +11,26 @@ void main()
 	//setlocale(LC_ALL, "Russian");	
 	SetConsoleCP(1251); 
 	SetConsoleOutputCP(1251);
-	//сделать интерфейс
+	cout << "Добро пожаловать в програму для подготовки к ОПИ!\n";
 	char switch_on;
 	do {
+		cout << "Выберете опцию:\n"
+			<< "1 - Проверка знаний\n"
+			<< "2 - Решение билета\n"
+			<< "0 - Выход\n";
 		cin >> switch_on;
 		switch_on -= 48;
 		switch (switch_on)
 		{
 		case 1: TestYourKnowledge();
 			break;
-		case 2: //функцмя 2
+		case 2: Preapare();
 			break;
 		case 0:break;
-		default: //error
+		default: cout << "Введите от 0 до 2! Нажмите кнопку для продолжения..." << endl;
+			_getch();
 			break;
 		}
+		system("cls");
 	} while (switch_on);
 }
