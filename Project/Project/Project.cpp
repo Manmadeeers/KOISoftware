@@ -8,10 +8,11 @@
 
 void main()
 {
+	SetConsoleTitle(TEXT("BSTU Exam Master"));
 	//setlocale(LC_ALL, "Russian");	
 	SetConsoleCP(1251); 
 	SetConsoleOutputCP(1251);
-	cout << "Добро пожаловать в програму для подготовки к экзамену по ОПИ!\n";
+	cout << "Вас привествует BSTU Exam Master\n";
 	char switch_on;
 	do {
 		cout << "Выберете опцию:\n"
