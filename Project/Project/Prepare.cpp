@@ -5,13 +5,14 @@ void Preapare() {
 	system("cls");
 	do {
 		int userTicketID;
-		cout << "Введите билет: ";
-		while (!(cin >> userTicketID) || (userTicketID < 1 || userTicketID > 5)) {
+		cout << "Введите билет(от 0 до 5, где 0 - выход): ";
+		while (!(cin >> userTicketID) || (userTicketID < 0 || userTicketID > 5)) {
 			cin.clear();
 			cin.ignore(32767, '\n');
-			cout << "Пожалуйста, введите число от 1 до " << 5 << ": ";
+			cout << "Пожалуйста, введите число от 0 до " << 5 << ": ";
 		}
-		system("cls");
+		if (!userTicketID) return;
+			system("cls");
 		int correctAnswers = 0;
 		for (char i = 1; i <= 4; i++) {
 			char rightAnswer = GetQuestion(userTicketID, i);
@@ -50,9 +51,7 @@ void Preapare() {
 		system("cls");
 	} while (choice == 'y' || choice == 'Y');
 
-	system("cls");
-	cout << "До свидания!" << endl;
-	_getch();
+
 	system("cls");
 }
 

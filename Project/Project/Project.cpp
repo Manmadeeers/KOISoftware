@@ -11,7 +11,7 @@ void main()
 	//setlocale(LC_ALL, "Russian");	
 	SetConsoleCP(1251); 
 	SetConsoleOutputCP(1251);
-	cout << "Добро пожаловать в програму для подготовки к ОПИ!\n";
+	cout << "Добро пожаловать в програму для подготовки к экзамену по ОПИ!\n";
 	char switch_on;
 	do {
 		cout << "Выберете опцию:\n"
@@ -19,6 +19,8 @@ void main()
 			<< "2 - Решение билета\n"
 			<< "0 - Выход\n";
 		cin >> switch_on;
+		cin.clear();
+		cin.ignore(32767, '\n');
 		switch_on -= 48;
 		switch (switch_on)
 		{
@@ -33,4 +35,5 @@ void main()
 		}
 		system("cls");
 	} while (switch_on);
+	cout << "До свидания! Увидемся позже!";
 }

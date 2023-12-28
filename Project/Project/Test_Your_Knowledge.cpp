@@ -129,8 +129,6 @@ if (ch != 27) {
         system("cls");
     } while (choice == 'y' || choice == 'Y');
 }
-system("cls");
-    cout << "До свидания!" << endl;
-    _getch();
+
     system("cls");
 }
