@@ -1,0 +1,2 @@
+[Документация](./getting-started.md)
+
