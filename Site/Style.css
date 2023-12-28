@@ -35,12 +35,18 @@ main {
   padding: 20px;
 }
 
-.employee-card, .goal {
+.employee-card, .goal , .name{
   border: 1px solid #E84A27;
   border-radius: 5px;
   padding: 20px;
   height: 300px;
   margin-bottom: 20px;
+}
+.contact{
+  border: 1px solid #E84A27;
+  border-radius: 5px;
+  padding: 20px;
+  height: 100px;
 }
 
 .employee-card img{
@@ -55,6 +61,13 @@ main {
   width: 350px;
   /* height: 250px; */
 }
+.name h1{
+  text-align: center;
+}
+.name p{
+  text-align: center;
+  font-size: 15pt;
+}
 
 footer {
   background-color: #E84A27;
@@ -65,16 +78,17 @@ footer {
 a{
   text-decoration: none;
 }
-.about{
+.about,.up, .last{
   padding: 20px;
 }
-.blur-element {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный цвет фона для эффекта размытия */
-  pointer-events: none; /* Это свойство позволяет пропускать события мыши через элемент */
-  filter: blur(5px); /* Применение размытия */
+.contact p{
+  color: gray;
+  text-align: center;
+}
+.contact p a{
+  text-decoration: none;
+  color: gray;
+}
+.contact p:first-child{
+  margin-top: 0;
 }
