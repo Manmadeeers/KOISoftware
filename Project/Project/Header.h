@@ -6,6 +6,9 @@
 #include <ctime>
 #include <vector>
 #include <conio.h>
+#include <string>
+#include <fstream>
 
 #include "TestYourKnowledge.h"
+#include "Tickets_and_Answers.h"
 using namespace std;

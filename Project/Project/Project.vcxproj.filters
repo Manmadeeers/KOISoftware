@@ -21,12 +21,18 @@
     <ClCompile Include="Test_Your_Knowledge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Tickets_and_Answers.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TestYourKnowledge.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Tickets_and_Answers.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
