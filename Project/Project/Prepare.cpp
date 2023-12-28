@@ -27,10 +27,12 @@ void Preapare() {
 
 			// Проверка правильности ответа
 			if (userAnswer == rightAnswer + 64 || userAnswer == rightAnswer + 48 || userAnswer == rightAnswer + 96) {
+				Beep(1000, 500);
 				cout << "\033[42mПравильно!\033[0m" << endl;
 				correctAnswers++;
 			}
 			else {
+				Beep(200, 500);
 				cout << "\033[41mНеправильно.\033[0m\nПравильный ответ: " << char(rightAnswer + 64) << endl;
 			}
 			cout << "Нажмите любую клавишу для продолжения...";

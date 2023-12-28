@@ -66,11 +66,13 @@ void conductTest(/*const vector<Ticket>& tickets*/) {
 
         // Проверка правильности ответа
         if (userAnswer == correctOptionIndex + 64 || userAnswer == correctOptionIndex + 48 || userAnswer == correctOptionIndex + 96) {
+            Beep(1000, 500);
             cout << "\033[42mПравильно!\033[0m" << endl;
             correctAnswers++;
         }
         else {
             cout << "\033[41mНеправильно.\033[0m\nПравильный ответ: " << char(correctOptionIndex + 64) << endl;
+            Beep(200, 500);
         }
 
         totalQuestions++;
