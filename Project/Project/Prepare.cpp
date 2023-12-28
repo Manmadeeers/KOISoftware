@@ -24,7 +24,8 @@ void Preapare() {
 				cin.ignore(32767, '\n');
 				cout << "Пожалуйста, введите число от A до " << char(maxOptions + 64) << ": ";
 			}
-
+			cin.clear();
+			cin.ignore(32767, '\n');
 			// Проверка правильности ответа
 			if (userAnswer == rightAnswer + 64 || userAnswer == rightAnswer + 48 || userAnswer == rightAnswer + 96) {
 				Beep(1000, 500);
