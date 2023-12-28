@@ -23,7 +23,7 @@ char GetQuestion(char idTicket, char idQuestion) {
 	questions.close();
 	answers.close();
 	correctAnswers.close();
-	cout << bufQ << endl << bufA << endl << bufB << endl
-		<< bufC << endl << bufD << endl;
+	cout << bufQ << endl << '\t' << bufA << endl << '\t' << bufB << endl
+		<< '\t' << bufC << endl << '\t' << bufD << endl;
 	return returnchar - 64;
 }
