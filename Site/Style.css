@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F2EFE9; 
+  background-color: #F2EFE9;
 }
 
 header {
@@ -35,38 +35,46 @@ main {
   padding: 20px;
 }
 
-.employee-card, .goal , .name{
+.employee-card,
+.goal,
+.name {
   border: 1px solid #E84A27;
   border-radius: 5px;
   padding: 20px;
   height: 300px;
   margin-bottom: 20px;
 }
-.contact{
+
+.contact {
   border: 1px solid #E84A27;
   border-radius: 5px;
   padding: 20px;
   height: 100px;
 }
 
-.employee-card img{
+.employee-card img {
   float: right;
   width: 180px;
   height: 250px;
   /* border-radius: 50%; */
 
 }
-.goal img{
+
+.goal img {
   float: right;
   width: 350px;
   /* height: 250px; */
 }
-.name h1{
-  text-align: center;
-}
-.name p{
+
+.name p {
   text-align: center;
   font-size: 15pt;
+  margin-top: 0;
+}
+
+.name p:first-child {
+  font-size: 30pt;
+  margin-bottom: 0;
 }
 
 footer {
@@ -75,20 +83,39 @@ footer {
   padding: 10px;
   text-align: center;
 }
-a{
+
+a {
   text-decoration: none;
 }
-.about,.up, .last{
+
+.about,
+.up,
+.last {
   padding: 20px;
 }
-.contact p{
+
+.contact p {
   color: gray;
   text-align: center;
 }
-.contact p a{
+
+.contact p a {
   text-decoration: none;
   color: gray;
 }
-.contact p:first-child{
+
+.contact p:first-child {
   margin-top: 0;
+}
+
+.name img {
+  width: 200px;
+  height: 200px;
+  margin-left: 610px;
+  margin-top: 0;
+}
+
+main a ,main a:visited{
+  text-decoration: none;
+  color: gray;
 }
